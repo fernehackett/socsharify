@@ -21,7 +21,7 @@ link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = `{{ asset("templates/Charlie Marcotte/style.css") }}`
 document.getElementsByTagName('HEAD')[0].appendChild(link)
-
+link.onload = function(){
 var socsharify = document.createElement("DIV")
 socsharify.id = `socsharify`
 @php
@@ -65,3 +65,4 @@ var html=`
 socsharify.innerHTML = html
 
 document.body.appendChild(socsharify)
+}
