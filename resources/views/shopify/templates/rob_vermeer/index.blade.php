@@ -24,6 +24,7 @@ link.type = 'text/css';
 link.href = `{{ asset("templates/Rob Vermeer/style.css") }}`
 document.getElementsByTagName('HEAD')[0].appendChild(link)
 
+link.onload = function(){
 var socsharify = document.createElement("DIV")
 socsharify.id = `socsharify`
 @php
@@ -52,3 +53,4 @@ var html = `<div class="share">
 
 socsharify.innerHTML = html
 document.body.appendChild(socsharify)
+}

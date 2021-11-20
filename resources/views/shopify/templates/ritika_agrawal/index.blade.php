@@ -24,6 +24,7 @@ link.type = 'text/css';
 link.href = `{{ asset("templates/ritika agrawal/style.css") }}`
 document.getElementsByTagName('HEAD')[0].appendChild(link)
 
+link.onload = function(){
 var socsharify = document.createElement("DIV")
 socsharify.id = `socsharify`
 @php
@@ -89,3 +90,4 @@ let socsharifyBtn = socsharify.querySelector(".button");
     @break
 @endswitch
 document.body.appendChild(socsharify)
+}
