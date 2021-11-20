@@ -181,6 +181,8 @@
     height: 75px;
     width: 75px;
     perspective: 1000px;
+    min-width: unset;
+    min-height: unset;
 }
 
 #socsharify .hover-toggle {
