@@ -1,5 +1,7 @@
 #socsharify *, #socsharify ::after, #socsharify ::before{
     box-sizing: unset;
+    min-width: unset;
+    min-height: unset;
 }
 
 #socsharify .icon-3d {
