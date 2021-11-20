@@ -299,9 +299,6 @@
     border-bottom-left-radius: 100px;
 }
 
-#socsharify .icon-container:active > .icon-3d {
-    transform: scale(0.8);
-}
 #socsharify.left, #socsharify.left .hover-toggle, #socsharify.left .icon-container, #socsharify.left label{
     left: 0;
     right: auto;
