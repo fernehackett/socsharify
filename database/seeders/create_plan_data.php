@@ -19,12 +19,12 @@ class create_plan_data extends Seeder
         Plan::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         Plan::create([
-           "type" => "RECURRING",
-            "name" => "Monthly",
+           "type" => "ONETIME",
+            "name" => "Basic Plan",
             "price" => 9.99,
             "interval" => "EVERY_30_DAYS",
-            "capped_amount" =>9.99,
-            "terms" => "A monthly charge to use service. Sometimes referred to as a maintenance fee.",
+            "capped_amount" =>19.99,
+            "terms" => "A  charge to use service. Sometimes referred to as a maintenance fee.",
             "trial_days" => 1,
             "test" => false,
             "on_install" => 1,
