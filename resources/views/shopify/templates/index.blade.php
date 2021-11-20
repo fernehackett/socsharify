@@ -19,7 +19,7 @@
             <select name="parent_id" class="form-control" required>
                 <option value="">Select template</option>
                 @foreach($_templates as $_template)
-                    @php $cTemplate = ($_template->id == $template->parent->id) ? $_template : ($cTemplate ?? null); @endphp
+                    @php $cTemplate = ($template && $_template->id == $template->parent->id) ? $_template : ($cTemplate ?? null); @endphp
                     <option @if($template && $_template->id == $template->parent->id) selected @endif value="{{ $_template->id }}">{{ $_template->display_name }}</option>
                 @endforeach
             </select>
