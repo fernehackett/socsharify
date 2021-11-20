@@ -20,8 +20,11 @@ class DashboardController extends Controller
 
     public function index(Request $request)
     {
-        $user = auth()->user();
-        $scriptTag = ScriptTag::where("shopify_url", $user->name)->where("name", "effectify")->first();
-        return response()->view("shopify.dashboard.index", [ "scriptTag" => $scriptTag]);
+        return response()->view("shopify.dashboard.index");
+    }
+
+    public function instructions(Request $request)
+    {
+        return view("shopify.instructions.index");
     }
 }

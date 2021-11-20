@@ -1,7 +1,12 @@
-@if(isset($user->share_this_api))
-    let script = document.createElement("SCRIPT");
+@if($user->enable && isset($user->share_this_api))
+    var script = document.createElement("SCRIPT");
     script.type = "text/javascript";
     script.async = "async";
-    script.src = "https://platform-api.sharethis.com/js/sharethis.js#property={{ $user->share_this_api }}&product=sop";
+    @isset($template)
+        script.src = "https://platform-api.sharethis.com/js/sharethis.js#property={{ $user->share_this_api }}&product=custom-share-buttons";
+    @else
+        script.src = "https://platform-api.sharethis.com/js/sharethis.js#property={{ $user->share_this_api }}&product=sop";
+    @endisset
     document.head.prepend(script);
+    @include("shopify.templates.{$template->parent->name}.index")
 @endif

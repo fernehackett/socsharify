@@ -1,0 +1,70 @@
+#socsharify a {
+    color: #f1ce64;
+}
+
+#socsharify .share {
+    position: fixed;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 80px;
+    z-index: 9999;
+}
+#socsharify .share span {
+    width: auto;
+    line-height: 80px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+#socsharify .share nav {
+    font-size: 0;
+    display: inline-flex;
+}
+#socsharify .share a {
+    line-height: 80px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    background-color: #ffffff;
+    color: #ffffff;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    margin: 0 -20px;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+}
+#socsharify .share a:hover{
+    background-color: #61c5ec;
+}
+#socsharify .share a:first-child {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-left: 0;
+}
+
+#socsharify .share a:last-child {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-right: 0;
+}
+
+#socsharify .share:hover span, #socsharify .share.hover span {
+    opacity: 0;
+}
+#socsharify .share:hover a, #socsharify .share.hover a {
+    border-radius: 50%;
+    margin: 0 10px;
+    color: #f1ce64;
+    font-size: 28px;
+}
+#socsharify .share:hover a:hover, #socsharify .share.hover a:hover {
+    color: #fff;
+}

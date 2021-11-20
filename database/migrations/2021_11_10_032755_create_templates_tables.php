@@ -17,7 +17,8 @@ class CreateTemplatesTables extends Migration
             $table->id();
             $table->string("shopify_url");
             $table->string("name");
-            $table->json("options");
+            $table->string("parent_id");
+            $table->json("options")->nullable();
             $table->text("description")->nullable();
             $table->tinyInteger("status")->default(0);
             $table->timestamps();

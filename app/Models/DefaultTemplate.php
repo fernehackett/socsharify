@@ -9,14 +9,17 @@ class DefaultTemplate extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = ["name", "display_name", "options","description"];
+    protected $casts = [
+        "options" => "array"
+    ];
 
     /*
     |------------------------------------------------------------------------------------
     | Validations
     |------------------------------------------------------------------------------------
     */
-    public static function rules($update = false, $id=null)
+    public static function rules($update = false, $id = null)
     {
         return [
             'name' => 'required',

@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 //        $this->call(users::class);
-//        $this->call(insert_effect_templates::class);
+        $this->call(insert_default_templates::class);
 
         if (config('variables.WITH_FAKER')) {
             // FAKE data

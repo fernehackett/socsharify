@@ -9,7 +9,7 @@ class Template extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["shopify_url", "name", "options", "description"];
+    protected $fillable = ["shopify_url", "parent_id", "name", "options", "description"];
     protected $casts = [
         "options" => "array"
     ];
@@ -31,7 +31,10 @@ class Template extends Model
     | Relations
     |------------------------------------------------------------------------------------
     */
-
+    public function parent()
+    {
+        return $this->belongsTo(DefaultTemplate::class,"parent_id");
+    }
     /*
     |------------------------------------------------------------------------------------
     | Scopes

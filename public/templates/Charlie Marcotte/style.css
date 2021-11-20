@@ -1,0 +1,303 @@
+#socsharify *, #socsharify ::after, #socsharify ::before{
+    box-sizing: unset;
+}
+
+#socsharify .icon-3d {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    transition: 0.5s;
+    transform: translate(-50%, -50%);
+}
+
+#socsharify {
+    position: fixed;
+    top: 50%;
+    z-index: 9999;
+}
+
+#socsharify .hover-toggle, #socsharify label {
+    height: 75px;
+    width: 75px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background: #2F6EA1;
+    border: 3px solid #884F47;
+}
+
+#socsharify .border {
+    position: absolute;
+    transform-origin: center center;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border: 2px solid white;
+    top: 4px;
+    left: 4px;
+}
+
+#socsharify label {
+    display: block;
+    position: absolute;
+    transition: 1s;
+    z-index: 100;
+}
+#socsharify label:hover {
+    background: #3d89c6;
+}
+
+#socsharify .share {
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    background: #2F6EA1;
+    border-radius: 100%;
+    border: 2px solid white;
+    z-index: 100;
+}
+
+#socsharify .toplayer {
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    background: #2F6EA1;
+    z-index: 100;
+    border-radius: 100%;
+}
+
+#socsharify .top {
+    z-index: 500;
+    right: 15px;
+    top: 13px;
+    animation: move 3s linear forwards infinite;
+}
+@keyframes move {
+    25% {
+        transform: translateX(-27px) translateY(-2px);
+    }
+    50% {
+        transform: translateX(-27px) translateY(-2px);
+    }
+    75% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+#socsharify .bottom {
+    bottom: 17px;
+    right: 15px;
+    animation: move2 3s linear forwards infinite;
+}
+@keyframes move2 {
+    25% {
+        transform: translateX(-27px) translateY(0px);
+    }
+    50% {
+        transform: translateX(-27px) translateY(0px);
+        transform: translateX(-27px) translateY(-2px);
+    }
+    75% {
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+#socsharify .mid {
+    top: 28px;
+    left: 15px;
+    animation: switch 3s linear forwards infinite;
+    z-index: 100;
+}
+#socsharify .mid:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: white;
+    transform: rotate(28deg);
+    top: 12px;
+    left: 8px;
+    animation: switch2 3s linear forwards infinite;
+    z-index: -10;
+}
+#socsharify .mid:after {
+    content: "";
+    position: absolute;
+    transform: rotate(-25deg);
+    height: 2px;
+    width: 24px;
+    top: -4px;
+    left: 8px;
+    background: white;
+    animation: switch3 3s linear forwards infinite;
+    z-index: -10;
+}
+@keyframes switch {
+    25% {
+        transform: translateX(34px);
+    }
+    50% {
+        transform: translateX(34px);
+    }
+    75% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes switch2 {
+    25% {
+        transform: translateX(-28px) translateY(2px) rotate(150deg);
+    }
+    50% {
+        transform: translateX(-28px) translateY(2px) rotate(150deg);
+    }
+    75% {
+        transform: translateY(0px) translateX(0px) rotate(28deg);
+    }
+}
+@keyframes switch3 {
+    25% {
+        transform: translateX(-28px) translateY(-3px) rotate(-150deg);
+    }
+    50% {
+        transform: translateX(-28px) translateY(-3px) rotate(-150deg);
+    }
+    75% {
+        transform: translateY(0px) translateX(0px) rotate(-25deg);
+    }
+}
+#socsharify .bottomTwo {
+    bottom: 14px;
+    left: 15px;
+}
+
+#socsharify .icon-container {
+    cursor: pointer;
+    position: absolute;
+    transition: 1s;
+    opacity: 0;
+    height: 75px;
+    width: 75px;
+    perspective: 1000px;
+}
+
+#socsharify .hover-toggle {
+    position: absolute;
+    display: block;
+    height: 75px;
+    width: 75px;
+}
+
+#socsharify input {
+    display: none;
+    position: absolute;
+    z-index: 100;
+}
+
+#socsharify input:checked ~ label {
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    transition: 1s;
+    transition-delay: 0.2s;
+    transform: translateY(-290%);
+}
+
+#socsharify input:checked ~ .icon-container:nth-child(3) {
+    opacity: 1;
+    transform: translateY(-149px);
+    transition: 1s;
+    transition-delay: 120ms;
+}
+
+#socsharify input:checked ~ .icon-container:nth-child(4) {
+    opacity: 1;
+    transform: translateY(-62px);
+    transition: 1s;
+    transition-delay: 160ms;
+}
+
+#socsharify input:checked ~ .icon-container:nth-child(5) {
+    opacity: 1;
+    transform: translateY(25px);
+    transition: 1s;
+    transition-delay: 200ms;
+}
+
+#socsharify input:checked ~ .icon-container:nth-child(6) {
+    opacity: 1;
+    transform: translateY(112px);
+    transition: 1s;
+    transition-delay: 240ms;
+}
+
+#socsharify input:checked ~ .icon-container:nth-child(7) {
+    opacity: 1;
+    transform: translateY(199px);
+    transition: 1s;
+    transition-delay: 280ms;
+}
+
+#socsharify .section {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    z-index: 200;
+}
+
+#socsharify .section:hover ~ .hover-toggle {
+    transition: 0.5s;
+    background: #3d89c6;
+}
+
+#socsharify .one {
+    top: 0px;
+    left: 0px;
+}
+#socsharify .one:hover ~ .hover-toggle {
+    transform-origin: bottom right;
+    transform: rotateX(11deg) rotateY(-11deg) translateZ(0px);
+}
+
+#socsharify .two {
+    top: 0px;
+    right: 0px;
+}
+#socsharify .two:hover ~ .hover-toggle {
+    transform-origin: bottom left;
+    transform: rotateX(11deg) rotateY(11deg) translateZ(0px);
+}
+
+#socsharify .three {
+    bottom: 0px;
+    left: 0px;
+}
+#socsharify .three:hover ~ .hover-toggle {
+    transform-origin: top right;
+    transform: rotateX(-11deg) rotateY(-11deg) translateZ(0px);
+}
+
+#socsharify .four {
+    bottom: 0px;
+    right: 0px;
+}
+#socsharify .four:hover ~ .hover-toggle {
+    transform-origin: bottom left;
+    transform: rotateX(-11deg) rotateY(11deg) translateZ(0px);
+}
+
+#socsharify .icon-container > #final {
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+#socsharify .icon-container:active > .icon-3d {
+    transform: scale(0.8);
+}
+#socsharify.left, #socsharify.left .hover-toggle, #socsharify.left .icon-container, #socsharify.left label{
+    left: 0;
+    right: auto;
+}
+#socsharify.right, #socsharify.right .hover-toggle, #socsharify.right .icon-container, #socsharify.right label{
+    right: 0;
+    left: auto;
+}

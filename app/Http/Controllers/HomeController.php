@@ -36,10 +36,10 @@ class HomeController extends Controller
     public function getScriptTags(Request $request)
     {
         $shop_url = $request->get("shop");
-        $template = Template::where("shopify_url", $shop_url)->where("status", 1)->first();
+        $template = Template::with("parent")->where("shopify_url", $shop_url)->first();
         $user = User::where("name", $shop_url)->first();
-        if ($user) {
-            return response()->view("shopify.script-tags.index", compact("user"))
+        if ($user && $template) {
+            return response()->view("shopify.script-tags.index", compact("user","template"))
                 ->header("Content-Type", "application/javascript")->header("Cache-Control", "no-store, no-cache, must-revalidate");
         } else
             return response("")->header("Content-Type", "application/javascript");

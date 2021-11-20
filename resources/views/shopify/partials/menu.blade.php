@@ -12,10 +12,19 @@
     </a>
 </li>
 <li class="nav-item">
-    <a class="sidebar-link {{ Str::startsWith($route, 'shopify.templates.index') ? 'active' : '' }}" href="{{ route('shopify.templates.index') }}">
+    <a class="sidebar-link {{ Str::startsWith($route, 'shopify.store-templates.index') ? 'active' : '' }}" href="{{ route('shopify.store-templates.index') }}">
         <span class="icon-holder">
             <i class="c-blue-500 ti-list"></i>
         </span>
         <span class="title">Templates</span>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="sidebar-link {{ Str::startsWith($route, 'shopify.instructions') ? 'active' : '' }}" href="{{ route('shopify.instructions') }}">
+        <span class="icon-holder">
+            <i class="c-blue-500 ti-help"></i>
+        </span>
+        <span class="title">Instructions</span>
     </a>
 </li>
