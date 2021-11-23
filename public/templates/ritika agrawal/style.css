@@ -111,6 +111,7 @@
     position: relative;
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 #socsharify .card_face {
