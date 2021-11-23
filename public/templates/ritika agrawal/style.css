@@ -133,3 +133,7 @@
 #socsharify:hover .card {
     transform: rotateY(180deg);
 }
+
+#socsharify:hover .card .front{
+    opacity: 0;
+}

@@ -10,12 +10,12 @@
                 <dl>
                     <dt>Step 1</dt>
                     <dd>
-                        After install <b>Socsharify</b>,you will redirect to the app page.
+                        After install <b>Socsharify</b>, you will redirect to the app UI page.
                     </dd>
                     <dt>Step 2</dt>
                     <dd>
-                        You must create a ShareThis account to have a key<br>
-                        Then you must fill the Share This key and click to enable to active the app.<br>
+                        You must create a <a href="https://platform.sharethis.com/signup" target="_blank">ShareThis</a> account to have a key<br>
+                        Then you must fill the ShareThis key and click to enable to active the app.<br>
                         Now you can use the ShareThis template in your website.<br>
                     </dd>
                     <dt>Step 3</dt>
