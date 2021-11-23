@@ -1,3 +1,4 @@
+
 @if($user->enable && isset($user->share_this_api))
     var script = document.createElement("SCRIPT");
     script.type = "text/javascript";
@@ -8,5 +9,7 @@
         script.src = "https://platform-api.sharethis.com/js/sharethis.js#property={{ $user->share_this_api }}&product=sop";
     @endisset
     document.head.prepend(script);
-    @include("shopify.templates.{$template->parent->name}.index")
+    @isset($template)
+        @include("shopify.templates.{$template->parent->name}.index")
+    @endisset
 @endif

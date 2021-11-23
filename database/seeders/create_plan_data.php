@@ -26,7 +26,7 @@ class create_plan_data extends Seeder
             "capped_amount" =>19.99,
             "terms" => "A  charge to use service. Sometimes referred to as a maintenance fee.",
             "trial_days" => 1,
-            "test" => false,
+            "test" => true,
             "on_install" => 1,
             "created_at" => null,
             "updated_at" => null
