@@ -31,17 +31,7 @@ socsharify.id = `socsharify`
     $icons = isset($template->options) ? $template->options["social networks"] : ["github","facebook","twitter","instagram","linkedin"];
     $position = isset($template->options) ? $template->options["position"] : "bottom";
 @endphp
-
-@switch ($position)
-    @case("top")
-        socsharify.style.top = `0`
-        socsharify.style.bottom = `auto`
-    @break
-    @case("bottom")
-        socsharify.style.bottom = `0`
-        socsharify.style.top = `auto`
-    @break
-@endswitch
+socsharify.classList.add(`s{{ $position }}`)
 var html = `<div class="share">
     <span>Share</span>
     <nav>
